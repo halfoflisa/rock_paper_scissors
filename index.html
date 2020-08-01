@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <script>
+
+                function computerPlay(computerSelection){
+                    if(computerSelection === 0){
+                        computerSelection = "rock";
+                    } else if(computerSelection === 1){
+                        computerSelection = "paper";
+                    } else if(computerSelection === 2){
+                        computerSelection = "scissors";
+                    }
+                }
+
+
+                function playRound(playerSelection, computerSelection){
+
+                    if(playerSelection === computerSelection) { 
+                        console.log("The result is a tie!");
+
+                    } else if(playerSelection === "rock"){
+                        if(computerSelection === "paper"){
+                            winner = false;
+                            console.log("You lose! Paper beats rock");
+                        } else if(computerSelection === "scissors"){
+                            winner = true;
+                            console.log("You win! Rock beats scissors");
+                        }
+                    } else if(playerSelection === "paper"){
+                        if(computerSelection === "rock"){
+                            winner = true;
+                            console.log("You win! Paper beats rock");
+                        } else if(computerSelection === "scissors"){
+                            winner = false;
+                            console.log("You lose! Scissors beats paper");
+                        }
+                    } else if(playerSelection === "scissors"){
+                        if(computerSelection === "paper"){
+                            winner = true;
+                            console.log("You win! Scissors beats paper");
+                        } else if(computerSelection === "rock"){
+                            winner = false;
+                            console.log("You lose! Rock beats scissors");
+                        }
+                    }
+                }
+
+                function game(){
+                    let playerScore = 0;
+                    let computerScore = 0;
+                    let winner;
+
+                    for (let i = 0; i < 5; i++){
+
+                        let playerSelection = prompt("Input either rock, paper, or scissors and see if you can beat the computer!").toLowerCase();
+                        let computerSelection = Math.floor(Math.random()*3);
+
+                        computerPlay(); 
+                        playRound();
+
+                        if (winner) {
+                            playerScore++;
+                        } else if (winner === false) {
+                            computerScore++;
+                        }
+                    }
+
+                    if (playerScore > computerScore){
+                        console.log("You win! Your Score: " + playerScore + " Computer Score: " + computerScore);
+                    } else if (playerScore < computerScore) {
+                        console.log("Computer wins! Computer Score: " + computerScore + " Your Score: " + playerScore);
+                    } else if (playerScore === computerScore) {
+                        console.log("You tied with the computer!");
+                    }
+                }
+                
+                game();
+
+            </script>
+        </body>
+    </head>
+</html>
