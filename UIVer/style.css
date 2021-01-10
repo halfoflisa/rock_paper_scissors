@@ -1,0 +1,65 @@
+@font-face {
+    font-family: NerkoOne-Regular;
+    src: url(/font/NerkoOne-Regular.ttf);
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: NerkoOne-Regular;
+    font-size: 3rem;
+    text-align: center;
+}
+
+p {
+    display: block;
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.outer {
+    position: relative;
+}
+
+.inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80%;
+}
+
+.score {
+    display: inline-block;
+    font-size: 4rem;
+}
+
+.selections {
+    display: inline-block;
+    font-size: 2rem;
+}
+
+input {
+    outline: none;
+}
+
+input:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+input:active {
+    position: relative;
+    top: 5px;
+}
+
+#winner {
+    color:indianred;
+    font-size: 4rem;
+}
