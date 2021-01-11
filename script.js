@@ -75,7 +75,7 @@ function playRound(btn){
                 gameWinner.innerHTML = "Congratulations! You Win!";
         } else if (computerScore === 5){
                 let gameWinner = document.getElementById('winner');
-                gameWinner.innerHTML = "You Lose!";
+                gameWinner.innerHTML = "You Lose! Refresh the page to try again";
         }
 
 }
