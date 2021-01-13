@@ -7,9 +7,8 @@
     </head>
         <body>
             <div class="outer">
-                <div class="inner">
-                    <p>You VS Bot</p>
-                    <p>Round Results</p>
+                    <div id="title">Rock Paper Scissors</div>
+                    <p>Round Results (You VS Bot)</p>
                     <div>
                         <div class="score" id="player">0</div>
                         <div class="score">:</div>
@@ -18,22 +17,25 @@
                     <div id="result">First to 5 points wins!</div>
                     <div id="winner"></div>
                     <div>
+                        <div id="restart"></div>
+                        <div id="coffee"></div>
+                    </div>
+                    <div id="selectionParent">
                         <p>Make your selection</p>
                         <div class="selections">
-                            <input type="image" src="image/Rock.png" ontouchstart="" alt="Rock" value="Rock"><br>
-                            Rock
+                            <input type="image" src="image/Rock.png" ontouchstart="" alt="Rock" value="Rock">
+                            <p>Rock</p>
                         </div>
                         <div class="selections">
-                            <input type="image" src="image/Paper.png" ontouchstart="" alt="Paper" value="Paper"><br>
-                            Paper
+                            <input type="image" src="image/Paper.png" ontouchstart="" alt="Paper" value="Paper">
+                            <p>Paper</p>
                         </div>
                         <div class="selections">
-                            <input type="image" src="image/Scissors.png" ontouchstart="" alt="Scissors" value="Scissors"><br>
-                            Scissors
+                            <input type="image" src="image/Scissors.png" ontouchstart="" alt="Scissors" value="Scissors">
+                            <p>Scissors</p>
                         </div>
                     </div>
-                    <div id="copyright">(c)2021 halfoflisa</div>
-                </div>
+                    <div id="copyright">(c)2021 halfoflisa</div>    
             </div>
 
             <script src="script.js"></script>
