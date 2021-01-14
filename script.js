@@ -98,7 +98,7 @@ function playRound(btn){
                 restart.appendChild(restartText);                
 
                 function reload(){
-                        window.location.reload();
+                        document.location.href = "/rock_paper_scissors/index.html";
                 }
 
                 restartBtn.addEventListener('click', reload);
